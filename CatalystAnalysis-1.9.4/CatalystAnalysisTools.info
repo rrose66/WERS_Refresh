@@ -1,0 +1,17 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.2.0
+
+This is the package holding the utilities used by the FEDEBOM Analysis process,
+there are various utilities common to the tool set.
+
+What's included:
+- 8/27/2019 1.1.0
+	- Added (US1162137) utility for external processing of WERS productCode, primary/minor features into FEDEBOM feature string
+	-- Added getfeaturestring.bat file for user/external access.
+	-- see: getfeaturestring.bat (modify the parameters of CMD_LINE_ARGS as needed)
+- 9/23/2019 v1.2.0
+	- Added (US1197181) utility to split the ChangedObjects file into smaller multiple files of size 1GB each.
+	-- see: splitChangeObjectsFile.bat (modify the parameters of CMD_LINE_ARGS as needed)
+	

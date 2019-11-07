@@ -1,0 +1,50 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.9.4
+
+-----------------------------------------------------------------------------------------
+
+This is the tool set used by Team Catalyst to analyze FEDEBOM data integrity
+
+ENVIRONMENT VARIABLES:
+	The tool set utilizes the following environment variables.
+	
+	JAVA_HOME
+		- the path to your java executable
+		- the default is set as C:\Program Files\Java\jre8
+	
+RESOURCES:
+	The default location is in the resources directory within the project folder.
+	
+	The tool set contains a base set of files used during development/testing located in the inputFiles
+	directory. Copy these files into your resources directory and modify as needed. 
+	
+	Any new/updated packages will not affect your files in the resources directory
+	
+PKG CONTENT:
+	As the tool set grows in functionality, new/updated resource files may need to be
+	added/updated to your resources directory.
+
+	For individual package content, please see the individual package info files.
+
+1.9.1	 	
+	* (US1180342) IT#: Create a tool to allow users validate the existence of required attributes within the NextAssemblyJsonFile.json file
+	* (US1162137) IT#: Create a tool to allow users to provide input to convert WERS primary/minor features into the FEDEBOM feature string
+v1.9.2
+	* (US1197181) #IT: Create a tool to allow users to discover the data structure and parse the BOMJson_ChangeObjects.json file into multiple files based on the discovered structure
+v1.9.3
+	* (US1212906) #IT: Create a tool to condense ALL program BOM json files into a single json file containing only the uniqueId's & the ptvl for each usage while maintaining the original file structure
+	
+-----------------------------------------------------------------------------------------------------------
+
+What's included:
+- CatalystAnalysisTools
+- F161305
+- F166833
+- F174012
+- F174726
+- F174779
+- F177971
+
+

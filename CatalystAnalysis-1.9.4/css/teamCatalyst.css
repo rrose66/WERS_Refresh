@@ -1,0 +1,92 @@
+@charset"ISO-8859-1";
+body{
+	height: 100%;
+    font-size:18px;
+    font-family:Arial;
+    background:#efeff5;
+}
+.fixed-header,.fixed-footer{
+    width:100%;
+    position:fixed;    
+    padding:10px 0;
+    text-align:center;
+}
+.fixed-header{
+    top:0;
+    font-size:1.5em;
+	color:#fff;
+	background:#0040ff;
+}
+.fixed-footer{
+    bottom:0;
+	font-size:.65em;
+	background:#efeff5;
+}
+.toggle-content,.toggle-slide{
+    display:none;
+}
+.toggle-content.is-visible{
+    display:block;
+}
+.toggle-slide.is-visible{
+    display:block;
+}
+.sidenav{
+    width:100px;
+    position:fixed;
+    z-index:1;
+    top:3.5em;
+    background:#3399ff;
+    overflow-x:hidden;
+    text-align:center;
+}
+.sidenav a{
+    padding:6px 8px 6px 16px;
+    text-decoration:none;
+    font-size:1em;
+    color:black;
+    display:block;
+}
+.sidenav a:hover{
+    color:#fff;
+}
+.tooltiptext {
+  visibility: hidden;
+  background-color:black;
+  color:white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity .75s;
+  width: 160px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.main{
+	overflow-y:auto;
+    margin-left:50px;
+    font-size:1.25em;
+    padding:80px;
+    width:80%;
+}
+ li{
+    padding:5px;
+}
+.feature{
+    font-size:.9em;
+}
+.userstories{
+    font-size:.9em;
+    padding:10px;
+}
+#Home {
+	text-align:center;
+	margin: 0 50 0 50;
+}
+

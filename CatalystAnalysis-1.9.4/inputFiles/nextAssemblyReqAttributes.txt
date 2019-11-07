@@ -1,0 +1,32 @@
+# This is a list of the required attributes used in data validation
+# all other attributes will be removed from the data comparison process.
+# Each attrirbute listed, one per line, will need its full path within
+# the json structure seperated by the char defined in the config.properies file (raDelim)
+# Blank lines will be ignored along with commented line, lines starting with the pund char '#'
+
+UniqueId:
+parentPartPrefix:
+parentPartBase:
+parentPartSuffix:
+childPartPrefix: 
+childPartBase:
+childPartSuffix: 
+cpsc: 
+cpscSequence: 
+partClass: 
+emissionIndicator: 
+safetyIndicator: 
+flammabilityInd: 
+sarIndicator: 
+homologAffected: 
+funcOwningActivity: 
+moduleType:
+ownerCDS: 
+quantity: 
+quantityUoM: 
+authority: 
+deleted: 
+childPBS: 
+parentPBS: 
+LMD:
+EffLMD:

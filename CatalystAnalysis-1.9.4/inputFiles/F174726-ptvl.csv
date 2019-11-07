@@ -1,0 +1,13 @@
+# The following csv list is used to search the usage file for the specified parameters
+# wersProductType, wersVehicleLine
+#
+# More items in this list will impact the performance of the toolset (F174726),
+# one pair of ptvl should take ~2 minutes while ALL active (70+) ptvl's will take ~2 hours
+#
+# An empty list will process ALL data in the usge file (all ptvl's) 2+ hours
+#
+# ex) T, T5: Will search for objects with where wersProductType="T" & wersVehicleLine="T5"
+#
+#PT,VL
+
+T,B8

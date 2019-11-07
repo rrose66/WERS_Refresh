@@ -1,0 +1,22 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.2.0
+
+RALLY: F174012 - #IT:Data integrity of Product ref & Program Ref attributes across multiple Json files
+
+Business Objective:?
+
+As a IT Service Personnel,
+when?multiple Json files are compared for data integrity of Product Ref?and Program Ref?attributes?
+?I need to identify the usages within a program which has mismatches
+so that I can make sure that? non- matching usages are updated with the correct values in order to prevent any downstream failures during data loading ,Authoring etc...? in FEDEBOM
+
+Preliminary Risk and Dependency Assessment:
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Objectives:
+US1032175: #IT-Validate productContainer & programContainer (UniqueId & productRef) id's in the BOMJson_Independent.json are matching values
+US1032962: #IT-Validate program BOM data files for proper values and consistancy for programCode & productRef id's
+

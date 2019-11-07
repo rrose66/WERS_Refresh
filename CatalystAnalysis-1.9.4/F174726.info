@@ -1,0 +1,22 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.2.0
+
+RALLY: F174726 - #IT: Create toolset to Convert WERS  Primary & Minor Feature attributes to FEDEBOM Format
+
+Business Objective:?
+
+As a IT Service Personnel,
+when WERS and FEDEBOM usages are compared for a particular PTVL
+?I need toolsets? which can convert the WERS primary and minor feature attributes to match FEDEBOM feature list attribute
+so that I can make sure that after comparison of WERS and FEDEBOM data,? non- matching usages are updated with the correct values in order to prevent any? failures during data loading ,Authoring etc...??in FEDEBOM
+
+Preliminary Risk and Dependency Assessment:
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Objectives:
+US1039753: #IT: Process a WERS usage file to generate a List of WERS primary and minor feature attributes strings
+US1057060: #IT: Generate a list of WERS primary and minor feature attributes strings based on a given list of PTVL's
+

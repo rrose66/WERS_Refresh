@@ -1,0 +1,39 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.2.0
+
+RALLY: F174779 - #IT : IT services  handled by Catalyst team
+
+Business Objective:
+
+This is generic feature for handling all services requests coming in the way of catalyst team
+
+As a IT Service Personnel,
+when?a? user service request comes through email,IT connect ticket?
+I need to required the analysis,system study,data preparation, validation etc. which will the enabler for code changes, in-memory fixes, changes to external systems ,data fix campaigns?
+so that I can make sure that?end users needs are met.
+
+Preliminary Risk and Dependency Assessment:
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Objectives:
+US1088141: #IT: Design - Create tool set to extract a given data container attributes for all parts within the master parts file 
+US1092101: #IT: Implementation Create tool set to extract a given data container attributes for all parts within the master parts file
+US1092111: #IT: jUnit-CreationCreate tool set to extract a given data container attributes for all parts within the master parts file
+
+US1098746: #IT: Design - Examine part cost records with multiple plants for data integrity
+US1098748: #IT: Implementation - Examine part cost records with multiple plants
+US1098749: #IT: Packaging - Examine part cost records with multiple plants
+
+-----------------------------------------------------------------------------------------------------------
+
+What's included:
+US1088141: Updates
+- fixed parsing of source data where newline char's exists
+- fixed parsing date object prior to zero epoch (Jan-01-1950)
+- added getResultsAsByteArray() to work with US1098746
+
+Added US1098746
+

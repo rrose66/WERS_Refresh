@@ -1,0 +1,38 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.1.1
+
+RALLY: F166833 - #IT ? Identify records with missing attributes in Json snapshot files
+
+Description/Objective: Part\usage ?information is stored/include? in multiple json files when snap shots are taken. Feature objective is to identify and report the records which are missing the provided list of attributes like PMT,owningActy etc?
+
+IT/Business Capability: Data Integrity of Parts
+
+Problem Statement:?As a <> I need <> so that <>.
+
+Actors/Customer End Users:?
+
+Primary: System
+Secondary:
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Objectives:
+US1001614: Validate a list of attributes for a given list Programs/Part master data files
+
+What's included:
+- 8/27/2019
+- Added (US1162127) ability to process a specific data container i.e: partContainer or usageContainer
+- updated System.out to use a logger
+- there is a new properties key/value set required for this change.
+  add the following to your F166833.properties file:
+
+#################################################################################
+# set the name of the container to process
+# make sure the required attributes are aligned to the container being processed
+# part/usage containers have different attributes 
+#################################################################################
+containername=partContainer
+#containername=usageContainer
+

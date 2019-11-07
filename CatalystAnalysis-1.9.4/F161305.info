@@ -1,0 +1,45 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 2.8.6
+
+RALLY: F161305 - #IT - Validate Part Integrity among Snapshot files
+
+Description/Objective: Part information is stored/include in multiple
+json files when snap shots are taken. Feature objective is to validate
+integrity of parts such that?information is same across for any given par
+
+IT/Business Capability: Data Integrity of Parts
+
+Problem Statement:?As a <> I need <> so that <>.
+
+Actors/Customer End Users:?
+
+
+
+Primary: System
+Secondary:
+Risk:?To be filled out with the IT architect team during the 'discovery' phase
+
+SME needed:?
+
+Acceptance Criteria:?Needed to reach 'defining' state
+
+
+
+GIVEN <Part Number> WHEN <snapshot taken> THEN <part information -attributes are same across all the json/db files>
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Objectives:
+US966246: #IT-Validate details of all Parts between all available Programs and Part master
+US966282: #IT-Validate details of all Parts between a list of Programs and Part master
+US966283: #IT-Validate details of all Parts between a Program and Part master
+US966285: #IT-Validate details of a list of Parts between all available Programs and Part master
+US966286: #IT-Validate details of a list of Parts between a list of Programs and Part master
+US966287: #IT-Validate details of a list of Parts between a Program and Part master
+US966288: #IT-Validate details of a Part between a Program and Part master
+US972851: #IT-Perform part details validation for selected attributes of given part(s) between Programs and Part master
+
+
+

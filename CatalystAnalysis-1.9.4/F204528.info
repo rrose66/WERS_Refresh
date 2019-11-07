@@ -1,0 +1,37 @@
+Running gradle version: 5.5
+Buildtime: 05-11-2019 07:24:01
+Application-name: CatalystAnalysis
+Version: 1.1.0
+
+RALLY: F204528 - #IT:Tools and utilities development to validate the data integrity in FEDEBOM and associated applications (2019Q4- Iter 9,Iter 10 & Iter 11)
+
+Business Objective:?
+
+This is generic feature for handling all tools and utilities development?to validate the data integrity in FEDEBOM and associated applications
+
+As a IT Service Personnel,
+I need to develop to tools and utilities which will aid in the the analysis,system study,data preparation, validation etc.?
+so that the prevailing issues are identified and addressed to maintain the? data integrity of data residing in FEDEBOM and other associated applications.
+
+Preliminary Risk and Dependency Assessment:
+
+Acceptance Criteria:
+Tools and utilities developed should be able to perform the required analysis\filtering and reporting of data for purposes identified ( each user story)so that the prevailing issues are identified and addressed to maintain the? data integrity of data residing in FEDEBOM and other associated applications.
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Objectives (User Stories):
+	US1234128 - #IT - WERS refresh data bump: Requirements Gathering & Analysis
+	US1234129 - #IT - WERS refresh data bump: Design
+	US1234131 - #IT - WERS refresh data bump: Coding
+	US1234132 - #IT - WERS refresh data bump: jUnitTests / Validation
+	US1234133 - #IT - WERS refresh data bump: Documentation / Bookkeeping
+	US1234135 - #IT - WERS refresh data bump: Packaging / Pkg Validation / Delivery
+	US1272085 - #IT - WERS refresh data bump: Requirements Change
+
+-----------------------------------------------------------------------------------------------------------
+What's included:
+US1234135 - 11/05/2019
+	- Processes program BOM files and identifies WERS suffix bump and validates effectivity In/Out dates for proper consistencies
+	
+	

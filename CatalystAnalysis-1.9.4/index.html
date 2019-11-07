@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/teamCatalyst.css">
+<title>CatalystAnalysis Tools</title>
+<script>
+	var divs = document.getElementsByClassName('toggle-content');
+	var slidedivs = document.getElementsByClassName('toggle-slide');
+	function showFeature(id) {
+		for (var i = 0; i < divs.length; i++) {
+			var div = divs[i];
+			if (div.id == id)
+				div.classList.add('is-visible');
+			else
+				div.classList.remove('is-visible');
+		}
+		hideUserstories();		
+	}
+	function toggleUserstory(id){
+		var div = document.getElementById(id);
+		if(!div.classList.contains('is-visible')){
+			div.classList.add('is-visible');
+			console.log(div);
+		} else {
+			div.classList.remove('is-visible');
+		}
+		// hide all others
+		hideUserstories(id);
+	}
+	function hideUserstories(id){
+		for (var i = 0; i < slidedivs.length; i++) {
+			if (slidedivs[i].id != id) {
+				slidedivs[i].classList.remove('is-visible');
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<header class="fixed-header">
+		Features Available within the Catalyst Analysis Tool Set
+	</header>
+	<div class="sidenav">
+		<a href="#Home" onClick="showFeature('Home');">Home</a>
+		<a href="#F161305" onClick="showFeature('F161305');">F161305</a>
+		<a href="#F166833" onClick="showFeature('F166833');">F166833</a>
+		<a href="#F174012" onClick="showFeature('F174012');">F174012</a>
+		<a href="#F174726" onClick="showFeature('F174726');">F174726</a>
+		<a href="#F174779" onClick="showFeature('F174779');">F174779</a>
+		<a href="#F177971" onClick="showFeature('F177971');">F177971</a>
+		<a href="#F204528" onClick="showFeature('F204528');">F204528</a>
+	</div>
+	<div class="main" id="content">
+		<div class="toggle-content is-visible" id="Home">
+			<p>
+				Select a feature on the left to access it's content.<br>
+				Each feature has selectable user stories along with their descriptions.
+			</p>
+			<p>
+				The intent is to provide a central location of the descriptions of the<br>
+				tools developed for Team Catalyst.
+			</p>
+	  	</div>
+	  	<div class="toggle-content feature" id="F161305">
+	  		<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/300499350340" target="_blank">
+				F161305
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT: Validate Part Integrity among Snapshot files<br><br>
+			Description/Objective: Part information is stored/include in multiple
+			json files when snap shots are taken. Feature objective is to validate
+			integrity of parts such that information is same across for any given par
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US966246" onClick="toggleUserstory('US966246');">
+							US966246
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of all Parts between all available Programs and Part master
+						<div class="toggle-slide userstories" id="US966246">
+							05/21/2019 Accepted<br>
+							Description:<br>							
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given and indication for * parts and * programs<br>
+							When the part data is created/modified<br>
+							Then validate sameness of the part data for all parts across all programs is used in							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US966282" onClick="toggleUserstory('US966282');">
+							US966282
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of all Parts between a list of Programs and Part master
+						<div class="toggle-slide userstories" id="US966282">
+							05/06/2019 Accepted<br>
+							Validate details of all Parts between a list of Programs and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a list of programs<br>
+							When the part data is created/modified<br>
+							Then validate sameness for all parts in those programs							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US966283" onClick="toggleUserstory('US966283');">
+							US966283
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of all Parts between a Program and Part master
+						<div class="toggle-slide userstories" id="US966283">
+							05/06/2019 Accepted<br>
+							Validate details of all Parts between a ProgramÂ and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a program<br>
+							When the part data is created/modified<br>
+							Then validate sameness of the part data for all parts in that program							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US966285" onClick="toggleUserstory('US966285');">
+							US966285
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of a list of Parts between all available Programs and Part master
+						<div class="toggle-slide userstories" id="US966285">
+							05/21/2019 Accepted<br>
+							Validate details of a list of Parts between all available Programs and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a list of part ids,<br>
+							When the part data is created/modified<br>
+							Then validate sameness of the part data across all Programs
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US966286" onClick="toggleUserstory('US966286');">
+							US966286
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of a list of Parts between a list of Programs and Part master
+						<div class="toggle-slide userstories" id="US966286">
+							05/21/2019 Accepted<br>
+							Validate details of a list of Parts between a list of Programs and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a list of part ids and a list of programs<br>
+							When the part data is created/modified<br>
+							Then validate sameness of the part data							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US966287" onClick="toggleUserstory('US966287');">
+							US966287
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of a list of Parts between a Program and Part master
+						<div class="toggle-slide userstories" id="US966287">
+							05/06/2019 Accepted<br>
+							Validate details of a list of Parts between a Program and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a list of part ids and a program
+							When the part data is created/modified<br>
+							Then validate sameness of the part data							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US966288" onClick="toggleUserstory('US966288');">
+							US966288
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate details of a Part between a Program and Part master
+						<div class="toggle-slide userstories" id="US966288">
+							05/06/2019 Accepted<br>
+							Validate details of a Part between a Program and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a part id and a program<br>
+							When the part data is created/modified<br>
+							Then validate sameness of the part data
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US972851" onClick="toggleUserstory('US972851');">
+							US972851
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Perform part details validation for selected attributes of given part(s) between Programs and Part master
+						<div class="toggle-slide userstories" id="US972851">
+							05/06/2019 Accepted<br>
+							Perform part details validation for selected attributes of given part(s) between Programs and Part master<br><br>
+							Description:<br>
+							In order to ensure part data integrity<br>
+							As a IT Data Quality Analyst<br>
+							I want part information to be consistent between the program and part master.<br><br>
+							Acceptance Criteria:<br>
+							Given a list of attributes of part(s) in program(s) to compare,<br>
+							When the part data is created/modified<br>
+							Then validate sameness for given attributes of the parts in those programs							
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	 	<div class="toggle-content feature" id="F166833">
+	  		<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/305583659692" target="_blank">
+				F166833
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT: Identify records with missing attributes in Json snapshot files<br><br>
+			Description/Objective: Part\usage information is stored/include in multiple json files when snap shots are taken.
+			Feature objective is to identify and report the records which are missing the provided list of attributes like PMT,
+			owningActy etc<br><br>
+			IT/Business Capability: Data Integrity of Parts<br>
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US1001614" onClick="toggleUserstory('US1001614');">
+							US1001614
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate a list of attributes for a given list Programs/Part master data files
+						<div class="toggle-slide userstories" id="US1001614">
+							06/17/2019 Accepted <br>
+							Description:<br>
+							As a member of the IT team:<br>
+							I want required part attributes to exist in the program and part master data files<br><br>
+							Acceptance Criteria:<br>
+							All required attributes for each and all parts exists<br>
+							Report out the parts with missing attributes							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US1162127" onClick="toggleUserstory('US1162127');">
+							US1162127
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: IT#: Enhance US1001614 to include the ability to process a specific data container for missing attributes
+						<div class="toggle-slide userstories" id="US1162127">
+							09/09/2019 Accepted<br>
+							In order to identify missing part/usage attributes<br><br>
+							As a System analyst, I need to analyze the different data containers found within a program BOM file,
+							the current solution only processes the partContainers.<br><br>
+							Acceptance Criteria:<br>
+							The analysis tool should process the given data container and report any missing 'required' attributes<br><br>
+							Notes:
+							Adds the ability to process a specific data container i.e: partContainer or usageContainer<br>
+							there is a new properties key/value set required for this change.<br>
+							add the following to your F166833.properties file:<br>
+							#################################################################################<br>
+							# set the name of the container to process<br>
+							# make sure the required attributes are aligned to the container being processed<br>
+							# part/usage containers have different attributes<br>
+							#################################################################################<br>
+							containername=partContainer<br>
+							#containername=usageContainer<br>
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	 	<div class="toggle-content feature" id="F174012">
+			<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/312140949552/userstories" target="_blank">
+				F174012
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT: Data integrity of Product ref &amp; Program Ref attributes across multiple Json files<br><br>
+			Business Objective:<br><br>
+			As a IT Service Personnel, when multiple Json files are compared for data integrity of Product Ref and
+			Program Ref attributes I need to identify the usages within a program which has mismatches
+			so that I can make sure that non- matching usages are updated with the correct values in
+			order to prevent any downstream failures during data loading ,Authoring etc... in FEDEBOM<br>
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US1032175" onClick="toggleUserstory('US1032175');">
+							US1032175
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate
+						productContainer &amp; programContainer (UniqueId &amp; productRef) id's in the BOMJson_Independent.json
+						are matching values<br>
+						<div class="toggle-slide userstories" id="US1032175">
+							06/14/2019 Accepted<br>
+							Description:<br>
+							Validate productContainer &amp; programContainer (UniqueId &amp; productRef) id's in the BOMJson_Independent.json
+							match for a given set of programCodes/vehicleLine id's<br><br>
+							Description:<br>
+							In order to ensure program data integrity<br><br>
+							As an IT personnel<br>
+							I want the productContainer-UniqueId &amp; programContainer-productRef values to be equal<br><br>
+							Acceptance Criteria<br>
+							productContainer-UniqueId &amp; programContainer-productRef are equal values for the given set of
+							programCodes &amp; vehicleLine id's							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US1032962" onClick="toggleUserstory('US1032962');">
+							US1032175
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT-Validate
+						program BOM data files for proper values and consistency for programCode &amp; productRef id's<br>
+						<div class="toggle-slide userstories" id="US1032962">
+							06/14/2019 Accepted<br>
+							Description:<br>
+							Validate program BOM data files for proper values and consistancy for programCode &amp; productRef id's<br><br>
+							In order to ensure program data integrity<br>
+							As an IT personnel<br>
+							I want the PrpgramCode &amp; productRef id's to match a set of given values and the productRef id's to
+							be consistant throught the data file<br><br>
+							Acceptance Criteria<br>
+							The PrpgramCode equals the given program value,<br>
+							the productRef equals the given reference value,<br>
+							and all productRef id's for each partID are the same value.							
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	 	<div class="toggle-content feature" id="F174726">
+	  		<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/312634498608" target="_blank">
+				F174726
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT: Create toolset to Convert WERS  Primary &amp; Minor Feature attributes to FEDEBOM Format<br><br>
+			Business Objective:<br><br>
+			As a IT Service Personnel, when WERS and FEDEBOM usages are compared for a particular PTVL
+			I need toolsets which can convert the WERS primary and minor feature attributes to match FEDEBOM
+			feature list attribute so that I can make sure that after comparison of WERS and FEDEBOM data,
+			non- matching usages are updated with the correct values in order to prevent any failures during data
+			loading,Authoring etc... in FEDEBOM<br>
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US1039753" onClick="toggleUserstory('US1039753');">
+							US1039753
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT: Process a
+						WERS usage file to generate a List of WERS primary and minor feature attributes strings
+						<div class="toggle-slide userstories" id="US1039753">
+							06/28/2019 Accepted - No additional info available
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US1057060" onClick="toggleUserstory('US1057060');">
+							US1057060
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT: Generate a
+						list of WERS primary and minor feature attributes strings based on a given list of PTVL's
+						<div class="toggle-slide userstories" id="US1057060">
+							06/28/2019 Accepted - No additional info available
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	  	<div class="toggle-content feature" id="F174779">
+	  		<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/312653393220" target="_blank">
+				F174779
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT : IT services  handled by Catalyst team<br><br>
+			Business Objective:<br>
+			This is generic feature for handling all services requests coming in the way of catalyst team<br><br>
+			As a IT Service Personnel, when a user service request comes through email,IT connect ticket
+			I need to required the analysis,system study,data preparation, validation etc. which will the
+			enabler for code changes, in-memory fixes, changes to external systems ,data fix campaigns
+			so that I can make sure that end users needs are met.
+			<br>
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US1088141" onClick="toggleUserstory('US1088141');">
+							US1088141
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT: Design -
+						Create tool set to extract a given data container attributes for all parts within
+						the master parts file
+						<div class="toggle-slide userstories" id="US1088141">
+							07/16/2019 Accepted<br>
+							Description<br>
+							As a IT Service Personnel, Due to the lartge file size of the BOMJson_AllParts.json
+							I want to extract a subset of data identifying the partID and a specific sub-data container<br><br>
+							Acceptance Criteria<br>
+							The generated output file contains the attributes outlined in the BOMJson_AllParts.json							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US1098746" onClick="toggleUserstory('US1098746');">
+							US1098746
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT: Design -
+						Examine part cost records with multiple plants for data integrity
+						<div class="toggle-slide userstories" id="US1098746">
+							08/13/2019 Accepted<br>
+							Description<br>
+							As a IT Service Personnel, I need to analyze the data integrity of the Costs accotiated with a part@plant<br><br>
+							Acceptance Criteria<br>
+							The results produced indicate the expected analysis where:<br>
+							- check for same startsOn &amp; expiresOn<br>
+							- check if both exist: startsOn &amp; expiresOn<br>
+							- check for maxStartOn, maxExpiresOn and duplicate startOn values<br>
+							- check for duplicate startOn values<br>
+							- check for broken 'date' chain<br>
+							- check for merging possibilities where cost value, currency and source are the same &amp; startsOn != expiresOn &amp; date chain is not broken
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	 	<div class="toggle-content feature" id="F177971">
+	  		<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/314747034896" target="_blank">
+				F177971
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT:Tools and utilities development to validate the data integrity in FEDEBOM and
+			associated applications<br><br>
+			Business Objective:<br>
+			This is generic feature for handling all tools and utilities development?to validate the data
+			integrity in FEDEBOM and associated applications<br><br>
+			As a IT Service Personnel, I need to develop to tools and utilities which will aid in the the
+			analysis,system study,data preparation, validation etc. so that the prevailing issues are
+			identified and addressed to maintain the? data integrity of data residing in FEDEBOM and other
+			associated applications.
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US1053111" onClick="toggleUserstory('US1053111');">
+							US1053111
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: US1053111: #IT: Design -
+						Create tool set to identify where used references
+						<div class="toggle-slide userstories" id="US1053111">
+							08/13/2019 Accepted<br>
+							Description:<br>
+							In order to identify the part relation dependencies<br><br>
+							As a System analyst, I want tool set which will identify the where used references and
+							report out it in a consolidated manner.<br><br>
+							Acceptance Criteria<br>
+							Given Multiple Json files &amp; Part ID List are present<br>
+							When the utility is executed<br>
+							Then a report is generated with the where used references and report out it in a consolidated manner.							
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US1180342" onClick="toggleUserstory('US1180342');">
+							US1180342	
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: US1180342 - #IT: Create a tool to allow users validate the existence of required attributes within the NextAssemblyJsonFile.json file
+						<div class="toggle-slide userstories" id="US1180342">
+							09/19/2019 Accepted<br>
+							In order to identify missing attributes<br><br>
+							As a System analyst, I need a tool to process and analyze the given content for missing attributes.<br><br>
+							Acceptance Criteria<br>
+							The analysis tool should process the NextAssemblyJsonFile.json file and report 'required' attributes
+							that do not exist or have empty/null values<br><br>						
+							Notes: Changes needed in the F177971.properties file<br>
+							add the following<br>
+								# set the path/filename of the 'required' attributes file
+								requiredattributes=src\\main\\resources\\nextAssemblyReqAttributes.txt<br>
+								# set the field delimiter used in the requiredAttributes.txt file
+								raDelim=:<br>
+								# set the path/filename of the report file (json format),
+								reportfile=NextAssemly_MissingAttributes.json
+						</div>
+					</li>
+					<li>
+						<a class="tooltip" href="#US1212906" onClick="toggleUserstory('US1212906');">
+							US1212906
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: US1212906 - #IT: Create a
+						tool to condense ALL program BOM json files into a single json file containing only the uniqueId's &amp; the ptvl for each usage while maintaining the original file structure
+						<div class="toggle-slide userstories" id="US1212906">
+							10/08/2019 Accepted<br>
+							In order to identify part usages<br><br>
+							As a System analyst, I need a tool to condense all program BOM json files into a single file for
+							part usage identification.<br><br>
+							Acceptance Criteria<br>
+							The output file should remove all attributes which are not UniqueId's and add the PTVL identification
+							to each item<br><br>						
+							Notes: Changes needed in the F177971.properties file<br>
+							Add new property setting<br>
+								# if a single program file is to be processed set this to match the program code<br>
+								# i.e. V711 will process BOMJson_V711.json located in the datadir defined above.<br>
+								# If not defined then ALL available program file defined in the BOMJson_Indepentent.json file will be processed.<br>
+								prgCode =
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	 	<div class="toggle-content feature" id="F204528">
+	  		<a class="tooltip" href="https://rally1.rallydev.com/#/273320135180d/detail/portfolioitem/feature/338726944072" target="_blank">
+				F204528
+				<span class="tooltiptext">A link to Rally</span>
+			</a> - #IT:Tools and utilities development to validate the data integrity in FEDEBOM and associated applications
+			(2019Q4- Iter 9,Iter 10 &amp; Iter 11)<br><br>
+			Business Objective:<br>
+			This is generic feature for handling all tools and utilities development to validate the data integrity in FEDEBOM
+			and associated applications<br>
+			<br>
+			As a IT Service Personnel,<br>
+			I need to develop to tools and utilities which will aid in the the analysis,system study,data preparation, validation etc.<br>
+			so that the prevailing issues are identified and addressed to maintain the data integrity of data residing in FEDEBOM
+			and other associated applications.<br>
+			<br>
+			Preliminary Risk and Dependency Assessment:<br>
+			<br>
+			Acceptance Criteria:<br>
+			Tools and utilities developed should be able to perform the required analysis\filtering and reporting of data for purposes
+			identified (each user story)so that the prevailing issues are identified and addressed to maintain their data integrity of
+			data residing in FEDEBOM and other associated applications.<br>
+			<div>
+				<ul>
+					<li>
+						<a class="tooltip" href="#US1234128" onClick="toggleUserstory('US1234128');">
+							US1234128
+							<span class="tooltiptext">Show/Hide details</span>
+						</a>: #IT - WERS refresh data bump
+						<div class="toggle-slide userstories" id="US1234128">
+							11/05/2019 Released<br>
+							Processes program BOM files and identifies WERS suffix bump and validates effectivity In/Out dates for
+							proper consistencies<br><br>
+							Description<br>
+							As a member of FEDEBOM IT<br>
+							I want to Understand the data quality issues regarding WERS refresh data bump
+							So that	I can create a toolset which can automatically identify data quality issues<br><br>
+							Acceptance Criteria<br>
+							Given FEDEBOM program data<br>
+							When WERS refresh causes a data bump (suffix code increment) issue<br>
+							Then logically identify proper usage of such data w/respect too effectivity In/Out values of each component<br><br>
+							Method to find soft matched suffix values based on below rules.<br><br>
+							<ol>
+								<li>
+									If the suffix is 1 character in length, just match on the prefix and base (e.g. A
+									soft matches B).
+								</li>
+								<li>
+									If 3rd position is &quotW&quot followed by blanks, soft match on the 2nd position of the
+									suffix (e.g. AAW soft matches ABW).
+								</li>
+								<li>
+									If 4th position is &quotW&quot followed by blanks, soft match on the 3rd position of the
+									suffix (e.g. AAAW soft matches AABW).
+								</li>
+								<li>
+									For suffixes starting with at least 1 alpha character and ending in a string of all
+									numbers (up to 6 numbers), soft match on the alpha portion less one character ignoring
+									the numeric portion. The length of the suffix and the length and value of the numeric
+									portion of the suffix must match. For example, AA30 advances to AB30, but AB40, AB31,
+									AA301 are not soft matches.
+								</li>
+								<li>
+									For all other non-blank suffixes, soft match on the last position of the suffix (e.g.
+									AA soft matches AB, A1A soft matches A1B, AAAA soft matches AAAB, etc.)
+								</li>
+								<li>
+									For blank suffixes, soft match on prefix and base only (exact match only - no predecessor)
+								</li>
+								<li>
+									DE59185: B1 is not soft match with BD. If we remove all digits from a suffix and we are left
+									with only one character, then there is no soft match.
+								</li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
+	 	</div>
+	</div>
+	<footer class="fixed-footer">
+		Copyright &copy; 2019 Ford Motor Company
+		<div id="lastmod">Updated: 10/29/2019</div>
+	</footer>
+</body>
+</html>

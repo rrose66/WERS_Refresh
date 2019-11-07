@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+		TRACE	DEBUG	INFO	WARN	ERROR	FATAL	OFF
+ALL		YES		YES		YES		YES		YES		YES		NO
+TRACE	YES		NO		NO		NO		NO		NO		NO
+DEBUG	YES		YES		NO		NO		NO		NO		NO
+INFO	YES		YES		YES		NO		NO		NO		NO
+WARN	YES		YES		YES		YES		NO		NO		NO
+ERROR	YES		YES		YES		YES		YES		NO		NO
+FATAL	YES		YES		YES		YES		YES		YES		NO
+OFF		NO		NO		NO		NO		NO		NO		NO
+-->
+<Configuration status="WARN">
+
+	<Properties>
+		<Property name="log-path">${sys:user.dir}</Property>
+		<Property name="log-filename">CatalystAnalysisTools.log</Property>
+		<Property name="console-format">%msg%n</Property>
+		<Property name="file-format">%-5p %d{yyyy-MM-dd HH:mm:ss} %6.10r %35C{1}:%4L - %msg%n</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="console-log-appender" target="SYSTEM_OUT">
+			<PatternLayout pattern="${console-format}"></PatternLayout>
+		</Console>
+		<File name="file-log-appender" fileName="${log-path}/${log-filename}" immediateFlush="true" append="false">
+			<PatternLayout pattern="${file-format}"></PatternLayout>>
+		</File>
+	</Appenders>
+
+	<Loggers>
+		<Root level="debug" additivity="false">
+			<AppenderRef ref="console-log-appender" level="info"></AppenderRef>
+			<AppenderRef ref="file-log-appender" level="debug"></AppenderRef>
+		</Root>
+	</Loggers>
+	
+</Configuration>
